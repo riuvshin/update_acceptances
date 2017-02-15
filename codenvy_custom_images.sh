@@ -10,7 +10,7 @@ if [ $is_logged -ne 1 ]; then
     docker login
 fi
 
-sh dockerfiles/agents/build.sh
+sh dockerfiles/agents/build.sh --skip-update
 sh dockerfiles/codenvy/build.sh
 sh dockerfiles/init/build.sh
 

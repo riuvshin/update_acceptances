@@ -114,7 +114,7 @@ update_acceptance() {
     #STOP
     ssh -o StrictHostKeyChecking=no -i ${SSH_KEY} codenvy@${ACCEPTANCE}.codenvy-stg.com "bash /home/codenvy/stop.sh"
     #START
-    ssh -o StrictHostKeyChecking=no -i ${SSH_KEY} codenvy@${ACCEPTANCE}.codenvy-stg.com "bash /home/codenvy/${LAUNCH_SKRIPT} start --skip:nightly --skip:pull"
+    ssh -o StrictHostKeyChecking=no -i ${SSH_KEY} codenvy@${ACCEPTANCE}.codenvy-stg.com "bash /home/codenvy/${LAUNCH_SKRIPT} start --skip:nightly --skip:pull --debug"
 }
 
 init $@
